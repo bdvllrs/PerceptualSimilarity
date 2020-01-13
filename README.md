@@ -23,15 +23,8 @@ This repository contains our **perceptual metric (LPIPS)** and **dataset (BAPPS)
 ## (0) Dependencies/Setup
 
 ### Installation
-- Install PyTorch 1.0+ and torchvision fom http://pytorch.org
-
-```bash
-pip install -r requirements.txt
 ```
-- Clone this repo:
-```bash
-git clone https://github.com/richzhang/PerceptualSimilarity
-cd PerceptualSimilarity
+pip install https://github.com/bdvllrs/PerceptualSimilarity
 ```
 
 ## (1) Learned Perceptual Image Patch Similarity (LPIPS) metric
