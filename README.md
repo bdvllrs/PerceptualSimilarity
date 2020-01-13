@@ -24,7 +24,7 @@ This repository contains our **perceptual metric (LPIPS)** and **dataset (BAPPS)
 
 ### Installation
 ```
-pip install https://github.com/bdvllrs/PerceptualSimilarity
+pip install --upgrade git+https://github.com/bdvllrs/PerceptualSimilarity
 ```
 
 ## (1) Learned Perceptual Image Patch Similarity (LPIPS) metric
