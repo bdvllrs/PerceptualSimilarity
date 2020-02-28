@@ -60,6 +60,7 @@ class PNetLin(nn.Module):
                 self.lin5 = NetLinLayer(self.chns[5], use_dropout=use_dropout)
                 self.lin6 = NetLinLayer(self.chns[6], use_dropout=use_dropout)
                 self.lins+=[self.lin5,self.lin6]
+            self.lins = self.ModuleList(self.lins)
 
     def forward(self, in0, in1, retPerLayer=False):
         # v0.0 - original release had a bug, where input was not scaled
