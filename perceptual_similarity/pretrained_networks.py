@@ -137,7 +137,7 @@ class vgg16(torch.nn.Module):
 
 
 class resnet(torch.nn.Module):
-    def __init__(self, requires_grad=False, pretrained=True, num=18):
+    def __init__(self, requires_grad=False, pretrained=True, num=50):
         super(resnet, self).__init__()
         if(num==18):
             self.net = tv.resnet18(pretrained=pretrained)
@@ -159,6 +159,10 @@ class resnet(torch.nn.Module):
         self.layer2 = self.net.layer2
         self.layer3 = self.net.layer3
         self.layer4 = self.net.layer4
+
+        if not requires_grad:
+            for param in self.parameters():
+                param.requires_grad = False
 
     def forward(self, X):
         h = self.conv1(X)
